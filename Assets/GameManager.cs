@@ -38,11 +38,10 @@ public class GameManager : MonoBehaviour
 
     void CheckAllItemsCollected()
     {
-        // Here you could check the count of collected items against the total number of collectible items
+        // check the count of collected items against the total number of collectible items
         if (collectedItems.Count == fridgeImages.Length)
         {
             Debug.Log("All items collected!");
-            // Optionally set some flag here or notify the fridge
         }
     }
 
