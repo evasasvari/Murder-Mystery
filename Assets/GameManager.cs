@@ -4,9 +4,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
-    private HashSet<string> collectedItems = new HashSet<string>();
-    public GameObject[] fridgeImages; // Assign images in the inspector corresponding to each item
+    private Dictionary<Item.ItemType, bool> collectedItems = new Dictionary<Item.ItemType, bool>();
 
     private void Awake()
     {
@@ -16,38 +14,28 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void ItemCollected(string itemTag)
+    public void ItemCollected(Item.ItemType itemType)
     {
-        collectedItems.Add(itemTag);
-        UpdateFridge(itemTag);
+        if (!collectedItems.ContainsKey(itemType))
+        {
+            collectedItems[itemType] = true;  // Mark the item type as collected
+        }
+
         CheckAllItemsCollected();
-    }
-
-    void UpdateFridge(string itemTag)
-    {
-        // Activate the corresponding image on the fridge
-        foreach (GameObject image in fridgeImages)
-        {
-            if (image.tag == itemTag)
-            {
-                image.SetActive(true);
-                break;
-            }
-        }
-    }
-
-    void CheckAllItemsCollected()
-    {
-        // check the count of collected items against the total number of collectible items
-        if (collectedItems.Count == fridgeImages.Length)
-        {
-            Debug.Log("All items collected!");
-        }
     }
 
     public bool AllItemsCollected()
     {
-        return collectedItems.Count == fridgeImages.Length;
+        // Example check for all items
+        return collectedItems.ContainsValue(false) == false; // Check if all items have been collected
     }
 
+    private void CheckAllItemsCollected()
+    {
+        // Add logic as needed to respond to all items being collected
+        if (AllItemsCollected())
+        {
+            Debug.Log("All items collected!");
+        }
+    }
 }

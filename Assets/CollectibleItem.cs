@@ -6,8 +6,13 @@ public class CollectibleItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.instance.ItemCollected(tag);  // Notify GameManager that an item was collected
-            gameObject.SetActive(false);  // disable the item
+            Item item = GetComponent<Item>();
+            if (item != null)
+            {
+                GameManager.instance.ItemCollected(item.itemType);  // Notify GameManager
+                item.OnCollect();  // Trigger any specific behaviors associated with the item being collected.
+                gameObject.SetActive(false);  // Optionally, deactivate the item here or within Item.OnCollect()
+            }
         }
     }
 }
