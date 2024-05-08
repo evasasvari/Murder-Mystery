@@ -4,11 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Photo
-  - Wine Glass
-  - Pregnancy test
-  - Wine Bottle
-  - Knife
+  - Item
   layers:
   - Default
   - TransparentFX
