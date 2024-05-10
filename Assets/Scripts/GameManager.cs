@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour
 
     private void InitializeCollectedItems()
     {
-        // Initialize the dictionary with all item types set to false
-        foreach (CollectibleItem.ItemType itemType in Enum.GetValues(typeof(CollectibleItem.ItemType)))
+        foreach (CollectibleItem.ItemType itemType in System.Enum.GetValues(typeof(CollectibleItem.ItemType)))
         {
             collectedItems[itemType] = false;
         }

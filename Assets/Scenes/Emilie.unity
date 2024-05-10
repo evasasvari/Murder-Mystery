@@ -139,7 +139,6 @@ GameObject:
   - component: {fileID: 111546641}
   - component: {fileID: 111546640}
   - component: {fileID: 111546643}
-  - component: {fileID: 111546642}
   m_Layer: 0
   m_Name: Wine Glass
   m_TagString: Item
@@ -159,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebaa179a58ba4c3f8fc4a83b5000885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 1
 --- !u!65 &111546636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -407,19 +407,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &111546642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111546634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3d74b5efcc8435a891d38dcb5e44bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemType: 1
 --- !u!65 &111546643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -593,7 +580,6 @@ GameObject:
   - component: {fileID: 796934234}
   - component: {fileID: 796934233}
   - component: {fileID: 796934236}
-  - component: {fileID: 796934235}
   m_Layer: 0
   m_Name: Pregnancy Test
   m_TagString: Item
@@ -613,6 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebaa179a58ba4c3f8fc4a83b5000885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 2
 --- !u!65 &796934229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -861,19 +848,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &796934235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796934227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3d74b5efcc8435a891d38dcb5e44bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemType: 2
 --- !u!65 &796934236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1026,7 +1000,7 @@ GameObject:
   - component: {fileID: 1040572096}
   - component: {fileID: 1040572095}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1159,7 +1133,6 @@ GameObject:
   - component: {fileID: 1049417020}
   - component: {fileID: 1049417019}
   - component: {fileID: 1049417022}
-  - component: {fileID: 1049417021}
   m_Layer: 0
   m_Name: Wine Bottle
   m_TagString: Item
@@ -1179,6 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebaa179a58ba4c3f8fc4a83b5000885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 3
 --- !u!65 &1049417015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1427,19 +1401,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1049417021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049417013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3d74b5efcc8435a891d38dcb5e44bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemType: 3
 --- !u!65 &1049417022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1477,7 +1438,6 @@ GameObject:
   - component: {fileID: 1364712099}
   - component: {fileID: 1364712098}
   - component: {fileID: 1364712101}
-  - component: {fileID: 1364712100}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Item
@@ -1497,6 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebaa179a58ba4c3f8fc4a83b5000885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 4
 --- !u!65 &1364712094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1745,19 +1706,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1364712100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364712092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3d74b5efcc8435a891d38dcb5e44bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemType: 4
 --- !u!65 &1364712101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1795,7 +1743,6 @@ GameObject:
   - component: {fileID: 1774893183}
   - component: {fileID: 1774893182}
   - component: {fileID: 1774893185}
-  - component: {fileID: 1774893184}
   m_Layer: 0
   m_Name: Photo
   m_TagString: Item
@@ -1815,6 +1762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebaa179a58ba4c3f8fc4a83b5000885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 0
 --- !u!65 &1774893178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2063,19 +2011,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1774893184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774893176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3d74b5efcc8435a891d38dcb5e44bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemType: 0
 --- !u!65 &1774893185
 BoxCollider:
   m_ObjectHideFlags: 0
