@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private Dictionary<Item.ItemType, bool> collectedItems = new Dictionary<Item.ItemType, bool>();
+    private Dictionary<CollectibleItem.ItemType, bool> collectedItems = new Dictionary<CollectibleItem.ItemType, bool>();
 
     private void Awake()
     {
@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void ItemCollected(Item.ItemType itemType)
+    public void ItemCollected(CollectibleItem.ItemType itemType)
     {
         if (!collectedItems.ContainsKey(itemType))
         {
@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
 
     private void CheckAllItemsCollected()
     {
-        // Add logic as needed to respond to all items being collected
         if (AllItemsCollected())
         {
             Debug.Log("All items collected!");
