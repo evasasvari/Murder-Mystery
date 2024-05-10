@@ -5,9 +5,18 @@ public class Fridge : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && GameManager.instance.AllItemsCollected())
+        if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("EndScene");  // Load the ending scene
+            Debug.Log("Player has interacted with the fridge.");
+            if (GameManager.instance.AllItemsCollected())
+            {
+                Debug.Log("All items collected, attempting to load the end scene.");
+                SceneManager.LoadScene("EndScene");
+            }
+            else
+            {
+                Debug.Log("Not all items collected yet.");
+            }
         }
     }
 }

@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
 
     private void InitializeCollectedItems()
     {
-        foreach (CollectibleItem.ItemType itemType in System.Enum.GetValues(typeof(CollectibleItem.ItemType)))
+        // Initialize the dictionary with all item types set to false
+        foreach (CollectibleItem.ItemType itemType in Enum.GetValues(typeof(CollectibleItem.ItemType)))
         {
             collectedItems[itemType] = false;
         }
@@ -40,9 +41,15 @@ public class GameManager : MonoBehaviour
 
     public bool AllItemsCollected()
     {
-        // Example check for all items
-        return collectedItems.ContainsValue(false) == false; // check if all items have been collected
+        // Ensure that each type of item has been collected
+        foreach (var item in collectedItems.Values)
+        {
+            if (!item)  // If any item is not collected (false)
+                return false;  // Not all items are collected
+        }
+        return true;  // All items are collected
     }
+
 
     private void CheckAllItemsCollected()
     {
