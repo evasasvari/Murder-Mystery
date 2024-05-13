@@ -15,6 +15,21 @@ public class CollectibleItem : XRGrabInteractable
 
     public ItemType itemType;  // Set in the Unity Inspector.
     private bool isCollected = false;  // Flag to track if the item has been collected
+    public AudioClip collectionSound;  // Public AudioClip to assign different sounds in the Inspector
+    private AudioSource audioSource;  // Reference to the AudioSource component
+
+
+    protected override void Awake()
+    {
+        base.Awake();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogWarning("AudioSource component not found, adding one.");
+            audioSource = gameObject.AddComponent<AudioSource>(); // Add AudioSource if not already attached
+        }
+    }
+
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -34,18 +49,14 @@ public class CollectibleItem : XRGrabInteractable
 
     public void OnCollect()
     {
-        // Trigger animations, sound effects, etc. Here using Debug.Log as a placeholder
-        Debug.Log($"{itemType} has been collected!");
-
-        // Update UI Text to show that the item has been collected
-        Text uiText = GameObject.Find("Canvas").transform.Find("Text").GetComponent<Text>();
-        if (uiText != null)
+        if (collectionSound != null)
         {
-            uiText.text = "You have collected the " + itemType;
+            audioSource.clip = collectionSound;
+            audioSource.Play();  // Play the audio clip assigned in the AudioSource component
         }
         else
         {
-            Debug.LogWarning("UI Text component not found. Make sure your UI Text is set up correctly.");
+            Debug.LogWarning("No AudioClip is assigned to collectionSound.");
         }
     }
 }

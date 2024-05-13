@@ -282,6 +282,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   itemType: 1
+  collectionSound: {fileID: 8300000, guid: 23771413e0bef4964967d69ffb03b2aa, type: 3}
 --- !u!65 &111546636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -754,6 +755,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   itemType: 2
+  collectionSound: {fileID: 8300000, guid: 2211dfd8c6d5040cd990f04927a4d0b9, type: 3}
 --- !u!65 &796934229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1430,6 +1432,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   itemType: 3
+  collectionSound: {fileID: 8300000, guid: 9ced08415e1d742bea4204661ef7ac91, type: 3}
 --- !u!65 &1049417015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1863,6 +1866,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   itemType: 4
+  collectionSound: {fileID: 8300000, guid: ba28320e08a834e798fc5284552c573a, type: 3}
 --- !u!65 &1364712094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2434,6 +2438,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   itemType: 0
+  collectionSound: {fileID: 8300000, guid: 96590cbd5d6b64793af29b758225759e, type: 3}
 --- !u!65 &1774893178
 BoxCollider:
   m_ObjectHideFlags: 0
