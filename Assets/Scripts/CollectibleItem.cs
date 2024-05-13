@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class CollectibleItem : MonoBehaviour
+public class CollectibleItem : XRGrabInteractable
 {
-    // types of items
     public enum ItemType
     {
         Photo,
@@ -13,11 +13,13 @@ public class CollectibleItem : MonoBehaviour
         Knife
     }
 
-    public ItemType itemType;  // set the item type in the Unity Inspector.
+    public ItemType itemType;  // Set in the Unity Inspector.
+    private bool isCollected = false;  // Flag to track if the item has been collected
 
-    private void OnTriggerEnter(Collider other)
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        if (other.CompareTag("VRHand"))
+        base.OnSelectEntered(args);  // Important to call the base method to handle the interaction properly
+        if (!isCollected)
         {
             CollectItem();
         }
@@ -27,12 +29,12 @@ public class CollectibleItem : MonoBehaviour
     {
         GameManager.instance.ItemCollected(itemType);  // Notify GameManager
         OnCollect();
-        gameObject.SetActive(false);  // Deactivate the item and remove it from the scene (for now)
+        isCollected = true;  // Prevent future collection
     }
 
     public void OnCollect()
     {
-        // trigger animations, sound effects etc instead of Debug.Log     
+        // Trigger animations, sound effects, etc. Here using Debug.Log as a placeholder
         Debug.Log($"{itemType} has been collected!");
 
         // Update UI Text to show that the item has been collected
