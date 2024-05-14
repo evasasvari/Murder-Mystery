@@ -30,13 +30,19 @@ public class GameManager : MonoBehaviour
 
     public void ItemCollected(CollectibleItem.ItemType itemType)
     {
-        if (!collectedItems.ContainsKey(itemType))
+        if (collectedItems.ContainsKey(itemType))
         {
-            collectedItems[itemType] = true;  // mark the item type as collected
+            collectedItems[itemType] = true;  // Ensure it's marked true
+            Debug.Log($"Item {itemType} collected and updated.");
+        }
+        else
+        {
+            Debug.LogWarning($"Item {itemType} not found in dictionary.");  // This should not happen
         }
 
         CheckAllItemsCollected();
     }
+
 
     public bool AllItemsCollected()
     {

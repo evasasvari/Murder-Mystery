@@ -33,7 +33,8 @@ public class CollectibleItem : XRGrabInteractable
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        base.OnSelectEntered(args);  // Important to call the base method to handle the interaction properly
+        Debug.Log($"Item {itemType} has been picked");
+        base.OnSelectEntered(args);  // Important to call the base method
         if (!isCollected)
         {
             CollectItem();
@@ -42,6 +43,7 @@ public class CollectibleItem : XRGrabInteractable
 
     private void CollectItem()
     {
+        Debug.Log($"Collecting {itemType}");  // Confirm this function is called
         GameManager.instance.ItemCollected(itemType);  // Notify GameManager
         OnCollect();
         isCollected = true;  // Prevent future collection
