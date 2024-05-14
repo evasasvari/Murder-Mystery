@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Emilie.unity
+    guid: d61bbf44e4da8427fb6b24375371b689
+  - enabled: 1
+    path: Assets/Oculus/Oculus Demo Scene.unity
+    guid: 319dafa5c80f29f428dc1e0d03f04177
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 94700004ec393497a963190af752fa93
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a2b746c2000465d4fb1bda65676e8dad, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 74435f9f0e797c84eb2316a4ecb038c6, type: 2}
