@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
-
-
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hello");
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Collision with the Fridge");
+        }
     }
 
 }
