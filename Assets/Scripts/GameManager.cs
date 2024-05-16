@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public ItemCollector itemCollector;
     private Dictionary<CollectibleItem.ItemType, bool> collectedItems = new Dictionary<CollectibleItem.ItemType, bool>();
 
     private void Awake()
@@ -34,6 +35,10 @@ public class GameManager : MonoBehaviour
         {
             collectedItems[itemType] = true;  // Ensure it's marked true
             Debug.Log($"Item {itemType} collected and updated.");
+            // Find the ItemCollector script and call ShowPolaroid
+            FindObjectOfType<ItemCollector>().ShowPolaroid(itemType);
+            itemCollector.ShowPolaroid(itemType);
+
         }
         else
         {
@@ -63,4 +68,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("All items collected!");
         }
     }
+
+
 }
+
