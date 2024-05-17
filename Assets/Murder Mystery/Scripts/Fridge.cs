@@ -11,7 +11,7 @@ public class Fridge : MonoBehaviour
             if (GameManager.instance.AllItemsCollected())
             {
                 Debug.Log("All items collected, attempting to load the end scene.");
-                SceneManager.LoadScene("EndScene");
+                SceneManager.LoadScene("ClosingGameScene");
             }
             else
             {
