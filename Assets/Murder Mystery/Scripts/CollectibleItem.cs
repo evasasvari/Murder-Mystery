@@ -17,7 +17,7 @@ public class CollectibleItem : XRGrabInteractable
     private bool isCollected = false;  // Flag to track if the item has been collected
     public AudioClip collectionSound;  // Public AudioClip to assign different sounds in the Inspector
     private AudioSource audioSource;  // Reference to the AudioSource component
-
+    public ParticleSystem glowEffect;  // Reference to the ParticleSystem
 
     protected override void Awake()
     {
@@ -28,8 +28,15 @@ public class CollectibleItem : XRGrabInteractable
             Debug.LogWarning("AudioSource component not found, adding one.");
             audioSource = gameObject.AddComponent<AudioSource>(); // Add AudioSource if not already attached
         }
+        if (glowEffect == null)
+        {
+            glowEffect = GetComponentInChildren<ParticleSystem>();
+            if (glowEffect == null)
+            {
+                Debug.LogWarning("ParticleSystem not found on the collectible item.");
+            }
+        }
     }
-
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -60,6 +67,10 @@ public class CollectibleItem : XRGrabInteractable
         {
             Debug.LogWarning("No AudioClip is assigned to collectionSound.");
         }
+        // Stop the particle system when the item is collected
+        if (glowEffect != null)
+        {
+            glowEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        }
     }
 }
-
