@@ -25,8 +25,9 @@ public class CollectibleItem : XRGrabInteractable
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            Debug.LogWarning("AudioSource component not found, adding one.");
             audioSource = gameObject.AddComponent<AudioSource>(); // Add AudioSource if not already attached
+
+            Debug.LogWarning("AudioSource component not found, adding one.");
         }
         if (glowEffect == null)
         {
