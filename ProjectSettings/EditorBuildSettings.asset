@@ -5,18 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Murder Mystery/Scenes/Emilie.unity
     guid: d61bbf44e4da8427fb6b24375371b689
-  - enabled: 1
+  - enabled: 0
     path: Assets/Oculus/Oculus Demo Scene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
-  - enabled: 1
+  - enabled: 0
     path: Assets/Murder Mystery/Scenes/EndScene.unity
     guid: 94700004ec393497a963190af752fa93
   - enabled: 1
+    path: Assets/Murder Mystery/Scenes/StartGameScene.unity
+    guid: 1fade286f92cc4421b95f4d67cdf6667
+  - enabled: 1
     path: Assets/Murder Mystery/Scenes/IntroGameScene.unity
     guid: e3ace5c6ec4a644339e5d32778e25ee8
+  - enabled: 1
+    path: Assets/Murder Mystery/Scenes/Room.unity
+    guid: dce34fc00816edb4a9bb976bb5937cb9
   - enabled: 1
     path: Assets/Murder Mystery/Scenes/ClosingGameScene.unity
     guid: 7046cd45f8a1f4d479974d9da8cff9d7
