@@ -889,7 +889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2438622040005227743, guid: 76252f210157b4f0f86bdb348c3edefb, type: 3}
       propertyPath: m_Text
-      value: Press the Trigger button to pick up objects
+      value: Press the Grip button to pick up objects
       objectReference: {fileID: 0}
     - target: {fileID: 2438622040005227743, guid: 76252f210157b4f0f86bdb348c3edefb, type: 3}
       propertyPath: m_Color.b
@@ -1265,7 +1265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2438622040005227743, guid: 76252f210157b4f0f86bdb348c3edefb, type: 3}
       propertyPath: m_Text
-      value: Press the XXX button to move forward
+      value: Press the Gip button to move forward
       objectReference: {fileID: 0}
     - target: {fileID: 2438622040005227743, guid: 76252f210157b4f0f86bdb348c3edefb, type: 3}
       propertyPath: m_Color.b
