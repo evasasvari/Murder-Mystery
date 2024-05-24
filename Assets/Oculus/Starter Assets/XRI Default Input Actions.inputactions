@@ -1345,7 +1345,7 @@
                 {
                     "name": "",
                     "id": "fa59aed1-ae0b-4074-a58c-294b85f46228",
-                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "path": "<XRController>{RightHand}/{PrimaryTrigger}",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
