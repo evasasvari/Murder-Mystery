@@ -616,9 +616,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 533915863}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2020153774}
     - targetCorrespondingSourceObject: {fileID: 7696548424635294048, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 956462155}
@@ -934,27 +931,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 956462145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2020153772 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
-  m_PrefabInstance: {fileID: 956462140}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2020153774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020153772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff746b063bc654702800c51b1da2fa53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHead: {fileID: 956462141}
-  bodyCollider: {fileID: 1979878208}
-  bodyHeightMin: 0.5
-  bodyHeightMax: 2
 --- !u!1001 &577175755221962566
 PrefabInstance:
   m_ObjectHideFlags: 0
