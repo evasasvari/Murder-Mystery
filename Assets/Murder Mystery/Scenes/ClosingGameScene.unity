@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a8ba0ebbaeb4a05a5fb93e167f9625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 229782904}
   nextSceneName: ExitScene
 --- !u!1001 &1018489216
 PrefabInstance:

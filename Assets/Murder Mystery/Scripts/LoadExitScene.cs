@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChangerAfterAudio : MonoBehaviour
+public class LoadExitScene : MonoBehaviour
 {
     public AudioSource audioSource;
     public string nextSceneName;
