@@ -497,10 +497,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127785597}
-        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
-        m_MethodName: GoToScene
-        m_Mode: 3
+      - m_Target: {fileID: 2127785598}
+        m_TargetAssemblyTypeName: SceneTransitions, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1306,6 +1306,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0ed9cef3f0449fc80f1be4801073de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &1687355848 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7739257364526909919, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
+  m_PrefabInstance: {fileID: 1687355845}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2073183906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1505,6 +1510,10 @@ PrefabInstance:
       propertyPath: fadeScreen
       value: 
       objectReference: {fileID: 1687355847}
+    - target: {fileID: 5363552558852536005, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
+      propertyPath: nextSceneName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7926259266628908387, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1549,22 +1558,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition Manager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5363552558852536005, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7957492490491467484, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2127785598}
   m_SourcePrefab: {fileID: 100100000, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
---- !u!114 &2127785597 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5363552558852536005, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
+--- !u!1 &2127785597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7957492490491467484, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
   m_PrefabInstance: {fileID: 2127785596}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &2127785598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127785597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34e4ce8cc6e12422c91829296d90ee87, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ec52be9a84a149f9a87950eb07631ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeRenderer: {fileID: 1687355848}
+  audioSource: {fileID: 0}
+  fadeDuration: 2
+  nextSceneName: Room
 --- !u!1 &4015128328068933872
 GameObject:
   m_ObjectHideFlags: 0

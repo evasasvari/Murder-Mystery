@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &5673416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7957492490491467484, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
+  m_PrefabInstance: {fileID: 7758867116997712147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &11718644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,6 +1883,11 @@ PrefabInstance:
       addedObject: {fileID: 339768662}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f3a38d534e5b9a4fa9cd3b3ec81dfb2, type: 3}
+--- !u!23 &1791343828 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7739257364526909919, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
+  m_PrefabInstance: {fileID: 1373025591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1828218084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2423500719253232714, guid: 34c2eb518c8f5904781322019a1deca0, type: 3}
@@ -2170,17 +2180,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8370542400355105744, guid: 11add328cb2a47a4c9e6af573064f71d, type: 3}
   m_PrefabInstance: {fileID: 1837326740}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2112963178 stripped
+--- !u!114 &2112963180
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5363552558852536005, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
-  m_PrefabInstance: {fileID: 7758867116997712147}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5673416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34e4ce8cc6e12422c91829296d90ee87, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ec52be9a84a149f9a87950eb07631ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeRenderer: {fileID: 1791343828}
+  audioSource: {fileID: 0}
+  fadeDuration: 2
+  nextSceneName: IntroGameScene
 --- !u!1 &2121838762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,19 +2413,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182438371627309224, guid: 68f9a718cf7c641d7ade3f2544ad3195, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7182438371627309224, guid: 68f9a718cf7c641d7ade3f2544ad3195, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2112963178}
+      objectReference: {fileID: 2112963180}
     - target: {fileID: 7182438371627309224, guid: 68f9a718cf7c641d7ade3f2544ad3195, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToScene
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 7182438371627309224, guid: 68f9a718cf7c641d7ade3f2544ad3195, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneTransitionManager, Assembly-CSharp
+      value: SceneTransitions, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7182438371627309224, guid: 68f9a718cf7c641d7ade3f2544ad3195, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -2588,6 +2603,10 @@ PrefabInstance:
       propertyPath: fadeScreen
       value: 
       objectReference: {fileID: 1697556360}
+    - target: {fileID: 5363552558852536005, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
+      propertyPath: nextSceneName
+      value: IntroGameScene
+      objectReference: {fileID: 0}
     - target: {fileID: 7926259266628908387, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2632,10 +2651,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition Manager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5363552558852536005, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7957492490491467484, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2112963180}
   m_SourcePrefab: {fileID: 100100000, guid: f435ffdd6106f45db916931f8f35a33f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
