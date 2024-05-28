@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(AudioSource))]
 public class CollectibleItem : XRGrabInteractable
 {
     public enum ItemType
@@ -19,6 +20,8 @@ public class CollectibleItem : XRGrabInteractable
     private AudioSource audioSource;  // Reference to the AudioSource component
     public ParticleSystem glowEffect;  // Reference to the ParticleSystem
 
+    [Range(0f, 1f)] public float audioVolume = 0.5f;
+
     protected override void Awake()
     {
         base.Awake();
@@ -26,7 +29,7 @@ public class CollectibleItem : XRGrabInteractable
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>(); // Add AudioSource if not already attached
-
+            audioSource.volume = audioVolume;
             Debug.LogWarning("AudioSource component not found, adding one.");
         }
         if (glowEffect == null)
