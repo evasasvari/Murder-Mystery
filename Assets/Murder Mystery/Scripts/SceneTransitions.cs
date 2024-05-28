@@ -36,7 +36,17 @@ public class SceneTransitions : MonoBehaviour
     private IEnumerator TransitionScene(string sceneName)
     {
         yield return StartCoroutine(Fade(1));  // Fade out
-        SceneManager.LoadScene(sceneName);
+                                               //        SceneManager.LoadScene(sceneName);
+        AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
+        async.allowSceneActivation = false;
+        while (!async.isDone)
+        {
+            if (async.progress >= 0.9f)
+            {
+                async.allowSceneActivation = true;
+            }
+            yield return null;
+        }
         yield return StartCoroutine(Fade(0));  // Fade in
     }
 
