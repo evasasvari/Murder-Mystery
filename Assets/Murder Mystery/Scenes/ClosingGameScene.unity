@@ -594,11 +594,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 229782903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7a8ba0ebbaeb4a05a5fb93e167f9625, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e4ce8cc6e12422c91829296d90ee87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeScreen: {fileID: 0}
   audioSource: {fileID: 229782904}
+  nextSceneName: 4
+--- !u!1 &639139275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639139277}
+  - component: {fileID: 639139276}
+  m_Layer: 0
+  m_Name: SceneTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &639139276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639139275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec52be9a84a149f9a87950eb07631ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeRenderer: {fileID: 1199541694}
+  audioSource: {fileID: 229782904}
+  fadeDuration: 2
   nextSceneName: ExitScene
+--- !u!4 &639139277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639139275}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.871315, y: 2.1770632, z: -6.079473}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1018489216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1080,6 +1129,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3268738229845650241, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
   m_PrefabInstance: {fileID: 1199541692}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1199541694 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7739257364526909919, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
+  m_PrefabInstance: {fileID: 1199541692}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1378664300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1298735930905799535, guid: 6098c374634e38e4c84528953f4a7f06, type: 3}
@@ -1296,3 +1350,4 @@ SceneRoots:
   - {fileID: 46011249}
   - {fileID: 1105850779}
   - {fileID: 134580175}
+  - {fileID: 639139277}
