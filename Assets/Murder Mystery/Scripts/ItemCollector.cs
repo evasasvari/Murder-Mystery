@@ -6,14 +6,22 @@ public class ItemCollector : MonoBehaviour
     public struct ItemPolaroidPair
     {
         public CollectibleItem.ItemType itemType;
-        public GameObject polaroid;
+        public GameObject blankPolaroid;  // GameObject for the blank polaroid
+        public GameObject foundPolaroid;  // GameObject for the polaroid that appears when the item is found
     }
 
     public ItemPolaroidPair[] itemPolaroidMappings;
 
     void Start()
     {
-        HideAllPolaroids();  // Optionally hide all on start
+        // Initially show the blank polaroids and hide the found ones
+        foreach (var pair in itemPolaroidMappings)
+        {
+            if (pair.blankPolaroid != null)
+                pair.blankPolaroid.SetActive(true);
+            if (pair.foundPolaroid != null)
+                pair.foundPolaroid.SetActive(false);
+        }
     }
 
     public void ShowPolaroid(CollectibleItem.ItemType collectedItemType)
@@ -22,18 +30,12 @@ public class ItemCollector : MonoBehaviour
         {
             if (pair.itemType == collectedItemType)
             {
-                pair.polaroid.SetActive(true);
+                if (pair.blankPolaroid != null)
+                    pair.blankPolaroid.SetActive(false);
+                if (pair.foundPolaroid != null)
+                    pair.foundPolaroid.SetActive(true);
                 break;
             }
         }
     }
-
-    private void HideAllPolaroids()
-    {
-        foreach (var pair in itemPolaroidMappings)
-        {
-            pair.polaroid.SetActive(false);
-        }
-    }
 }
-
