@@ -629,10 +629,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec52be9a84a149f9a87950eb07631ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeRenderer: {fileID: 1199541694}
   audioSource: {fileID: 229782904}
-  fadeDuration: 2
   nextSceneName: ExitScene
+  fadeScreen: {fileID: 1199541694}
 --- !u!4 &639139277
 Transform:
   m_ObjectHideFlags: 0
@@ -1129,11 +1128,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3268738229845650241, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
   m_PrefabInstance: {fileID: 1199541692}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &1199541694 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7739257364526909919, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
+--- !u!114 &1199541694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1388136854145421714, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
   m_PrefabInstance: {fileID: 1199541692}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0ed9cef3f0449fc80f1be4801073de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1378664300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1298735930905799535, guid: 6098c374634e38e4c84528953f4a7f06, type: 3}

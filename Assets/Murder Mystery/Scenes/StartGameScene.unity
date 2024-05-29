@@ -1883,11 +1883,6 @@ PrefabInstance:
       addedObject: {fileID: 339768662}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f3a38d534e5b9a4fa9cd3b3ec81dfb2, type: 3}
---- !u!23 &1791343828 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7739257364526909919, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
-  m_PrefabInstance: {fileID: 1373025591}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1828218084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2423500719253232714, guid: 34c2eb518c8f5904781322019a1deca0, type: 3}
@@ -2192,10 +2187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec52be9a84a149f9a87950eb07631ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeRenderer: {fileID: 1791343828}
   audioSource: {fileID: 0}
-  fadeDuration: 2
   nextSceneName: IntroGameScene
+  fadeScreen: {fileID: 1697556360}
 --- !u!1 &2121838762
 GameObject:
   m_ObjectHideFlags: 0

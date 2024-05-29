@@ -1306,11 +1306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0ed9cef3f0449fc80f1be4801073de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!23 &1687355848 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7739257364526909919, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
-  m_PrefabInstance: {fileID: 1687355845}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2073183906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1584,10 +1579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec52be9a84a149f9a87950eb07631ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeRenderer: {fileID: 1687355848}
   audioSource: {fileID: 0}
-  fadeDuration: 2
   nextSceneName: Room
+  fadeScreen: {fileID: 1687355847}
 --- !u!1 &4015128328068933872
 GameObject:
   m_ObjectHideFlags: 0

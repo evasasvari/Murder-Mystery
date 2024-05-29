@@ -1216,7 +1216,7 @@ Transform:
   m_GameObject: {fileID: 183312124}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.3934, y: 1.39, z: -9.01}
+  m_LocalPosition: {x: 16.29, y: 1.39, z: -8.86}
   m_LocalScale: {x: 4.8467236, y: 4.1255736, z: 5.0546527}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1285,10 +1285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec52be9a84a149f9a87950eb07631ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeRenderer: {fileID: 1948393296}
   audioSource: {fileID: 0}
-  fadeDuration: 2
   nextSceneName: ClosingGameScene
+  fadeScreen: {fileID: 1948393295}
 --- !u!1 &200323908
 GameObject:
   m_ObjectHideFlags: 0
@@ -30989,11 +30988,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3268738229845650241, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
   m_PrefabInstance: {fileID: 1948393293}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &1948393296 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7739257364526909919, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
+--- !u!114 &1948393295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1388136854145421714, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
   m_PrefabInstance: {fileID: 1948393293}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0ed9cef3f0449fc80f1be4801073de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1951801462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3011398908546815706, guid: 0a61b0710770f74469c79b1cb6fe033b, type: 3}

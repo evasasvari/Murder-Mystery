@@ -510,10 +510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec52be9a84a149f9a87950eb07631ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeRenderer: {fileID: 1171893661}
   audioSource: {fileID: 0}
-  fadeDuration: 2
   nextSceneName: StartGameScene
+  fadeScreen: {fileID: 1667664946}
 --- !u!1 &158971055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,11 +1738,6 @@ PrefabInstance:
 --- !u!4 &1171893660 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3268738229845650241, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
-  m_PrefabInstance: {fileID: 1171893659}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1171893661 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7739257364526909919, guid: 75f843925697a4917b8be530088dc3cc, type: 3}
   m_PrefabInstance: {fileID: 1171893659}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1174540212
